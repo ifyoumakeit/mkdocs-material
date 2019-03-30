@@ -20,8 +20,24 @@
   IN THE SOFTWARE.
 -->
 
+{% set nav_sorted = nav %}
+{% if config.theme.sort == 'blog' %}
+  {% set nav_sorted = nav | sort(attribute='title') | reverse %}
+{% endif %}
+
 <!-- Main navigation -->
 <nav class="md-nav md-nav--primary" data-md-level="0">
+
+  {% if config.theme.action %}
+  <a
+    class="md-button"
+    target="_blank"
+    href="{{ config.theme.action.url or config.repo_url + '/issues' | url }}"
+    >
+    <i class="md-icon">{{ config.theme.action.icon or 'add' }}</i> 
+    {{ config.theme.action.text or 'Open issue' }}
+  </a>
+  {% endif %}
 
   <!-- Site title -->
   <label class="md-nav__title md-nav__title--site" for="__drawer">
@@ -45,7 +61,7 @@
 
   <!-- Render item list -->
   <ul class="md-nav__list" data-md-scrollfix>
-    {% for nav_item in nav %}
+    {% for nav_item in nav_sorted %}
       {% set path = "nav-" + loop.index | string %}
       {% set level = 1 %}
       {% include "partials/nav-item.html" %}

@@ -254,6 +254,13 @@
         {% include "partials/tabs.html" %}
       {% endif %}
 
+      <!-- Notice teaser -->
+      {% block notice %}
+        {% if page and page.meta and page.meta.notice %}
+          {% include "partials/notice.html" with context %}
+        {% endif %}
+      {% endblock %}
+
       <!-- Main container -->
       <main class="md-main">
         <div class="md-main__inner md-grid" data-md-component="container">

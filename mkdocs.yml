@@ -33,9 +33,11 @@ edit_uri: ""
 copyright: 'Copyright &copy; 2016 - 2019 Martin Donath'
 
 # Configuration
-theme:
+theme:  
   name: null
   custom_dir: material
+  action: 
+    text: "Add bug"
 
   # 404 page
   static_templates:
@@ -50,8 +52,8 @@ theme:
   feature:
     tabs: true
   palette:
-    primary: indigo
-    accent: indigo
+    primary: blue
+    accent: light-blue
   font:
     text: Roboto
     code: Roboto Mono

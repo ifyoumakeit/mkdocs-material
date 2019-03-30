@@ -36,10 +36,16 @@
     {% if toc_ | first is defined %}
       <label class="md-nav__link md-nav__link--active" for="__toc">
         {{ nav_item.title }}
+        {% if nav_item.meta and nav_item.meta.date %}
+          <br><small>{{ nav_item.meta.date }}</small>
+        {% endif %}
       </label>
     {% endif %}
     <a href="{{ nav_item.url | url }}" title="{{ nav_item.title }}" class="md-nav__link md-nav__link--active">
       {{ nav_item.title }}
+      {% if nav_item.meta and nav_item.meta.date %}
+          <br><small>{{ nav_item.meta.date }}</small>
+        {% endif %}
     </a>
     {% if toc_ | first is defined %}
       {% include "partials/toc.html" %}
@@ -49,6 +55,9 @@
   <li class="{{ class }}">
     <a href="{{ nav_item.url | url }}" title="{{ nav_item.title }}" class="md-nav__link">
       {{ nav_item.title }}
+      {% if nav_item.meta and nav_item.meta.date %}
+        <br><small>{{ nav_item.meta.date }}</small>
+      {% endif %}
     </a>
   </li>
 {% endif %}

@@ -21,51 +21,13 @@
 ////
 
 // ----------------------------------------------------------------------------
-// Dependencies
+// Rules
 // ----------------------------------------------------------------------------
 
-@import "modularscale";
-@import "material-color";
-@import "material-shadows";
-
-// ----------------------------------------------------------------------------
-// Local imports
-// ----------------------------------------------------------------------------
-
-@import "helpers/break";
-@import "helpers/px2em";
-
-@import "config";
-
-@import "base/reset";
-@import "base/icons";
-@import "base/typeset";
-
-@import "layout/base";
-@import "layout/button";
-@import "layout/clipboard";
-@import "layout/content";
-@import "layout/header";
-@import "layout/hero";
-@import "layout/footer";
-@import "layout/nav";
-@import "layout/notice";
-@import "layout/search";
-@import "layout/sidebar";
-@import "layout/source";
-@import "layout/tabs";
-
-@import "extensions/admonition";
-@import "extensions/codehilite";
-@import "extensions/footnotes";
-@import "extensions/permalinks";
-
-@import "extensions/pymdown/arithmatex";
-@import "extensions/pymdown/critic";
-@import "extensions/pymdown/details";
-@import "extensions/pymdown/emoji";
-@import "extensions/pymdown/inlinehilite";
-@import "extensions/pymdown/superfences";
-@import "extensions/pymdown/tasklist";
-
-@import "shame";
+// Hero teaser
+.md-notice {
+  text-align: center;
+  padding: 12px;
+  background-color: $clr-yellow-800;
+  color: $clr-black;
+}

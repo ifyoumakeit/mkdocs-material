@@ -1,3 +1,7 @@
+---
+notice: This is a fork of mkdocs-material
+---
+
 # Material <small>for MkDocs</small>
 
 ## Create beautiful project documentation
